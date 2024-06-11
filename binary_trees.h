@@ -24,7 +24,12 @@ typedef struct binary_tree_s bst_t;
 typedef struct binary_tree_s avl_t;
 typedef struct binary_tree_s heap_t;
 
-#include "queue.h"
+typedef struct queue_node_s
+{
+    const binary_tree_t *node;
+    struct queue_node_s *next;
+} queue_node_t;
+
 
 /* Function prototype */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
